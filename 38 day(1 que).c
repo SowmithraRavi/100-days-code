@@ -14,3 +14,18 @@ void toBinary(int N)
         printf("%d",biarr[j]);
     }
 }
+#binary to decimal
+int binary_to_decimal(char str[]) {
+    int decimal = 0;
+    int base = 1;  
+    int length = strlen(str);
+
+    for (int i = length - 1; i >= 0; i--) {
+        if (str[i] == '1') {
+            decimal += base;
+        }
+        base *= 2;  
+    }
+
+    return decimal;
+}
